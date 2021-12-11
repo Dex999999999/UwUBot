@@ -16,16 +16,36 @@ on:
 # A workflow run is made up of one or more jobs that can run sequentially or in parallel
 jobs:
   # This workflow contains a single job called "build"
-  updateserver:
+  stopserver:
     # The type of runner that the job will run on
     runs-on: ubuntu-latest
 
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
-      - name: Trigger Git Clone on Server
+      - name: Stop Server
         run: |
-          curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/power -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "{ \"signal\": \"stop\" }"
-          curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/power -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "{ \"signal\": \"start\" }"
+          curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/power -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "{ \"signal\": \"stop\" }" 
+        env:
+          USER_TOKEN: ${{ secrets.PAGES_TOKEN }}
+  startserver:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Start Server
+        run: |
+          curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/power -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "{ \"signal\": \"start\" }" 
+        env:
+          USER_TOKEN: ${{ secrets.PAGES_TOKEN }}
+  runbot:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Git Pull, NPM I and run bot
+        run: |
           curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/command -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "{ \"command\": \"npm run dev\" }" 
         env:
           USER_TOKEN: ${{ secrets.PAGES_TOKEN }}
