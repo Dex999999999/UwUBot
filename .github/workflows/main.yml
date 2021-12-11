@@ -1,0 +1,29 @@
+# This is a basic workflow to help you get started with Actions
+
+name: CI
+
+# Controls when the workflow will run
+on:
+  # Triggers the workflow on push or pull request events but only for the main branch
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+
+  # Allows you to run this workflow manually from the Actions tab
+  workflow_dispatch:
+
+# A workflow run is made up of one or more jobs that can run sequentially or in parallel
+jobs:
+  # This workflow contains a single job called "build"
+  updateserver:
+    # The type of runner that the job will run on
+    runs-on: ubuntu-latest
+
+    # Steps represent a sequence of tasks that will be executed as part of the job
+    steps:
+      - name: Trigger Git Clone on Server
+        run: |
+          curl "https://pterodactyl.file.properties/api/client/servers/d7704dee/command"  -H 'Accept: application/json'  -H 'Content-Type: application/json'  -H 'Authorization: HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z' -X POST -b 'pterodactyl_session'='eyJpdiI6ImxUQWJtRmRVT2Y4TVBFTEp4TURTMWc9PSIsInZhbHVlIjoiRjc2dUd5eUsxTEhvbWZmWTVobVJYU1dTT3pRQzNTTzVjaEtyT01weUJTd0VBZXVseEJ1MVpXYWJTYWY4TVV5cUlIVUlLdEhsdEZnQktzd1NPQlF1SDM1NWsvMENKT2dFMngrYm1tWlZzRGJDUHk4S2U0dnFaTnNjZ3FranRtd0EiLCJtYWMiOiI0YTc1ZTI0NjMwM2JjYmJhOWEwZmJjYzlhMzM5NzEwMTM2MzRhMWZmZjljYTJjZTdkZTRmZGRlODg5YzM5MTk1In0%3D'  -d '{ "command": "say CodeCo says Hi!" }' 
+        env:
+          USER_TOKEN: ${{ secrets.PAGES_TOKEN }}
