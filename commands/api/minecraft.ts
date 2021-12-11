@@ -1,8 +1,9 @@
 import { MessageEmbed } from "discord.js";
 import { ICommand } from "wokcommands";
 import axios from "axios";
-const fs = require('fs');
+import fs from 'fs';
 
+const hypickel = '3b45f709-216c-4a3e-962c-d7c648bf1127'
 
 export default {
     

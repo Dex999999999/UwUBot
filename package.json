@@ -18,6 +18,8 @@
     "apple-music-playlist": "^1.1.3",
     "axios": "^0.24.0",
     "canvas": "^2.8.0",
+    "dbd-capriham-theme": "^1.2.7",
+    "discord-dashboard": "^1.5.74",
     "discord-image-generation": "^1.4.9",
     "discord.js": "^13.2.0",
     "distube": "^3.0.1",
