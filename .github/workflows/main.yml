@@ -23,6 +23,7 @@ jobs:
     # Steps represent a sequence of tasks that will be executed as part of the job
     steps:
       - name: Git Pull, NPM I and run bot
-        run: curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/command -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "{ \"command\": \"npm run dev\" }" 
+        run: |
+          curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/command -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "{ \"command\": \"npm run dev\" }" 
         env:
           USER_TOKEN: ${{ secrets.PAGES_TOKEN }}
