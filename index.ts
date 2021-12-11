@@ -1,6 +1,6 @@
 //bot inv link: https://discord.com/api/oauth2/authorize?client_id=897718800974225450&permissions=8&scope=bot%20applications.commands
 //HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z pterodactyl
-//ddd
+//pp
 import DiscordJS, { Intents, Message, TextChannel } from 'discord.js'
 import DisTube from 'distube'
 import WOKCommands from 'wokcommands'
