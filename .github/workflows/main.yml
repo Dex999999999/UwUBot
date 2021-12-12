@@ -24,6 +24,6 @@ jobs:
     steps:
       - name: runbot
         run: |
-          curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/command -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "\{ \"command\": \"npm run dev\" \}" -L -b "pterodactyl_session=eyJpdiI6ImxUQWJtRmRVT2Y4TVBFTEp4TURTMWc9PSIsInZhbHVlIjoiRjc2dUd5eUsxTEhvbWZmWTVobVJYU1dTT3pRQzNTTzVjaEtyT01weUJTd0VBZXVseEJ1MVpXYWJTYWY4TVV5cUlIVUlLdEhsdEZnQktzd1NPQlF1SDM1NWsvMENKT2dFMngrYm1tWlZzRGJDUHk4S2U0dnFaTnNjZ3FranRtd0EiLCJtYWMiOiI0YTc1ZTI0NjMwM2JjYmJhOWEwZmJjYzlhMzM5NzEwMTM2MzRhMWZmZjljYTJjZTdkZTRmZGRlODg5YzM5MTk1In0%3D"
+          curl -X POST https://panel.wumpus.host/api/client/servers/d7704dee/command -H "Accept: application/json" -H "Content-Type: application/json" -H "Authorization: Bearer HkGS3qMsZGsAULnVekgacCM5nK59ZOLnPY45F01MX5DGEx6Z" -d "\{ \"command\": \"npm run dev\" \}"
         env:
           USER_TOKEN: ${{ secrets.PAGES_TOKEN }}
