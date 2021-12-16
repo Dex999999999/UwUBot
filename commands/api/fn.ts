@@ -63,7 +63,7 @@ export default {
                 }
 
                 for (var _i = 0; _i < res.data.data.daily.entries.length; _i++) {
-                    console.log(res.data.data.featured.entries[_i].bundle)
+                    console.log(res.data.data.daily.entries[_i].bundle)
                     if(res.data.data.daily.entries[_i].bundle != null){
                         var shops = new MessageEmbed()
                         .setTitle(res.data.data.daily.entries[_i].bundle.name)
