@@ -10,7 +10,8 @@ const key = '3df74618-3702-4e96-a681-36ecf0cf047c'
 
 export default {
     category: 'Random',
-    description: 'Fortnite stats',
+    description: 'Fortnite shop',
+    aliases: ['shop'],
 
     slash: false,
     testOnly: true,
@@ -33,12 +34,54 @@ export default {
                     //     pages.push(embed);
                     // }
                 
-                const embed = new MessageEmbed()
-                    .setTitle(res.data.data.featured.entries[0].bundle.name)
-                    .setColor('PURPLE')
-                    .setImage(res.data.data.featured.entries[0].newDisplayAsset.materialInstances[0].images.Background)
-                    .setTimestamp()
-                pages.push(embed)
+                // const embed = new MessageEmbed()
+                //     .setTitle(res.data.data.featured.entries[0].bundle.name)
+                //     .setColor('PURPLE')
+                //     .setImage(res.data.data.featured.entries[0].newDisplayAsset.materialInstances[0].images.Background)
+                //     .setTimestamp()
+                // pages.push(embed)
+                
+                for (var _i = 0; _i < res.data.data.featured.entries.length; _i++) {
+                    console.log(res.data.data.featured.entries[_i].bundle)
+                    if(res.data.data.featured.entries[_i].bundle != null){
+                        var shops = new MessageEmbed()
+                        .setTitle(res.data.data.featured.entries[_i].bundle.name)
+                        .setColor('PURPLE')
+                        .setImage(res.data.data.featured.entries[_i].newDisplayAsset.materialInstances[0].images.Background)
+                        .setTimestamp()
+                        
+                    pages.push(shops)
+                    } else {
+                        var shops = new MessageEmbed()
+                        .setTitle(res.data.data.featured.entries[_i].items[0].name)
+                        .setColor('PURPLE')
+                        .setImage(res.data.data.featured.entries[_i].newDisplayAsset.materialInstances[0].images.Background)
+                        .setTimestamp()
+                        
+                    pages.push(shops)
+                    }
+                }
+
+                for (var _i = 0; _i < res.data.data.daily.entries.length; _i++) {
+                    console.log(res.data.data.featured.entries[_i].bundle)
+                    if(res.data.data.daily.entries[_i].bundle != null){
+                        var shops = new MessageEmbed()
+                        .setTitle(res.data.data.daily.entries[_i].bundle.name)
+                        .setColor('PURPLE')
+                        .setImage(res.data.data.daily.entries[_i].newDisplayAsset.materialInstances[0].images.Background)
+                        .setTimestamp()
+                        
+                    pages.push(shops)
+                    } else {
+                        var shops = new MessageEmbed()
+                        .setTitle(res.data.data.daily.entries[_i].items[0].name)
+                        .setColor('PURPLE')
+                        .setImage(res.data.data.daily.entries[_i].newDisplayAsset.materialInstances[0].images.Background)
+                        .setTimestamp()
+                        
+                    pages.push(shops)
+                    }
+                    }
 
                 
                 const curPage = await channel.send({ embeds: [pages[page]] });
