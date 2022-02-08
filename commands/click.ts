@@ -6,7 +6,7 @@ export default {
     description: 'Test your CPS with a button',
 
     slash: 'both',
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ interaction: msgInt, channel }) => {
         const row = new MessageActionRow()

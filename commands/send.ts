@@ -6,7 +6,7 @@ export default {
     description: 'Sends a message',
 
     slash: 'both',
-    testOnly: true,
+    testOnly: false,
     guildOnly: true,
 
     //permissions: ['ADMINISTRATOR'],

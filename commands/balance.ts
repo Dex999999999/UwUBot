@@ -10,7 +10,7 @@ export default {
     aliases: ['bal'],
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
         if(message.content.includes("help")){

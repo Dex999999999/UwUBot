@@ -32,7 +32,9 @@ export default {
                 console.error('ERR:', err)
             })
         }
+    else{
         message.channel.send(`Trivia`)
+    }
         
     }
 } as ICommand

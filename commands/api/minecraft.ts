@@ -12,7 +12,7 @@ export default {
     aliases: ['mc'],
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message, args }) => {
         if(args.length < 1) return "you need to specify a player's name"

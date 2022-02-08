@@ -5,7 +5,7 @@ export default {
     description: '😎',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
     
 
     callback: ({message}) => {

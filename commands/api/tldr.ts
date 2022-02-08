@@ -8,7 +8,7 @@ export default {
     description: 'Summarizes a given source',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
     cooldown: '10s',
     aliases: ['summarize'],
 

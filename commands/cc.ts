@@ -6,7 +6,7 @@ export default {
     aliases: ['clear'],
 
     slash: 'both',
-    testOnly: true,
+    testOnly: false,
 
     permissions: ['MANAGE_MESSAGES'],
 

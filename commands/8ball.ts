@@ -32,7 +32,7 @@ export default {
     description: 'Determines the answer 🔮',
 
     slash: 'both',
-    testOnly: true,
+    testOnly: false,
     
     expectedArgs: '<question>',
     

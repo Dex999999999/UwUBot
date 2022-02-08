@@ -8,7 +8,7 @@ export default {
     description: 'Fetches a definition from urban dictionary',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
     aliases: ['ud'],
 
     callback: async ({ message, args }) => {

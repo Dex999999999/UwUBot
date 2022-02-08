@@ -5,7 +5,7 @@ export default {
   description: 'Makes catbot ponder the meaning of life',
 
   slash: 'both',
-  testOnly: true,
+  testOnly: false,
 
   options: [
     {

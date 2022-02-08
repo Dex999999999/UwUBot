@@ -10,7 +10,7 @@ export default {
     aliases: ['lyric', 'l'],
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message, args }) => {
         const queue = DISTUBE.getQueue(message)

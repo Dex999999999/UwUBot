@@ -9,7 +9,7 @@ export default {
     aliases: ['c'],
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
         var filter = { userID: message.author.id }

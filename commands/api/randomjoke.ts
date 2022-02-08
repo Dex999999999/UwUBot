@@ -9,7 +9,7 @@ export default {
     aliases: ['rjoke'],
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
         await axios.get('https://some-random-api.ml/joke')

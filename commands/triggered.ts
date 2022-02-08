@@ -7,7 +7,7 @@ export default {
         description: '**TRIGGERED**',
 
         slash: false,
-        testOnly: true,
+        testOnly: false,
     
 
         callback: async ({message, client, user, args}) => {

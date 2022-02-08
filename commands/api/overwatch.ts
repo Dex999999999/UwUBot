@@ -9,7 +9,7 @@ export default {
     aliases: ['ow'],
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message, args }) => {
         console.log(args)

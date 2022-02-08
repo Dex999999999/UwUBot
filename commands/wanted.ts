@@ -7,7 +7,7 @@ export default {
         description: '**wanted**',
 
         slash: false,
-        testOnly: true,
+        testOnly: false,
     
 
         callback: async ({message, client, user, args}) => {

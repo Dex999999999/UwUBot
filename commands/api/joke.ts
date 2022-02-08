@@ -8,7 +8,7 @@ export default {
     description: 'Fetches a random joke',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
         let config = {

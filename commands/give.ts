@@ -16,7 +16,7 @@ export default {
     description: 'Give Another User a Cookie',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message, args }) => {
         //if there is a mention in the message

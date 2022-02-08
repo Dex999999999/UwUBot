@@ -8,7 +8,7 @@ export default {
     description: 'Fetch',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
     
 
     callback: async ({message, args, client}) => {

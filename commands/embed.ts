@@ -7,7 +7,7 @@ export default {
     description: 'Sends an embed',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     //permissions: ['ADMINISTRATOR'],
 

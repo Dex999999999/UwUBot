@@ -8,7 +8,7 @@ export default {
     description: 'Fetches the astronomy picture of the day',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
 

@@ -8,7 +8,7 @@ export default {
     description: 'Shows a picture of a cat',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
         await axios.get('https://api.thecatapi.com/v1/images/search')

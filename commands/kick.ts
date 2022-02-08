@@ -7,7 +7,7 @@ export default {
     requireRoles: true,
 
     slash: 'both',
-    testOnly: true,
+    testOnly: false,
     guildOnly: true,
 
     minArgs: 2,

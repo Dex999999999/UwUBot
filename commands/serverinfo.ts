@@ -6,7 +6,7 @@ export default {
     description: 'Shows information about the server',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
     
 
     callback: async ({message, client, guild}) => {

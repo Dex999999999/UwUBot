@@ -6,7 +6,7 @@ export default {
     description: 'Gets info on an emoji',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
     
 
     callback: ({message, args, client}) => {

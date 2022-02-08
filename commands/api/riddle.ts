@@ -8,7 +8,7 @@ export default {
     description: 'Fetches a riddle',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
         const randomRiddle = RIDDLE[Math.floor(Math.random() * RIDDLE.length)];

@@ -6,7 +6,7 @@ export default {
     description: 'Adds a role',
 
     slash: 'both',
-    testOnly: true,
+    testOnly: false,
     guildOnly: true,
 
     permissions: ['ADMINISTRATOR'],

@@ -5,7 +5,7 @@ export default {
     description: 'Finds all users with a role',
 
     slash: 'both',
-    testOnly: true,
+    testOnly: false,
     
 
     callback: ({message, client, args}) => {

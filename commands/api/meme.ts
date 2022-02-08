@@ -8,7 +8,7 @@ export default {
     description: 'Gives a meme',
 
     slash: false,
-    testOnly: true,
+    testOnly: false,
 
     callback: async ({ message }) => {
         var subReddit = message.content.slice(6)
